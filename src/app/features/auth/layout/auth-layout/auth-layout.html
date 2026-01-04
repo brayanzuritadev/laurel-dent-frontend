@@ -1,0 +1,25 @@
+<!--<form [formGroup]="myForm" (ngSubmit)="goToWhatsApp()" class="space-y-6 w-full max-w-sm">
+        <div class="card flex flex-col  justify-center md:justify-start">
+          <input
+            pInputText
+            formControlName="ci"
+            type="text"
+            placeholder="CI o Celular"
+            required
+            class="w-full"
+          />
+          @if(myForm.controls['ci'].errors?.['minlength']){
+            <small class="p-error">
+              <span>
+                {{formUtils.getFieldError(myForm, "ci")}}
+              </span>
+            </small>
+          }
+        </div>
+        
+        <div>
+        <button href="#" class="button mx-auto cursor-pointer shadow-xl shadow-sky-blue/30 pointer-coarse: md:mx-0" [disabled]="myForm.invalid">Consultar citas</button>
+        </div>
+      </form>-->
+
+<app-login-page></app-login-page>

@@ -1,0 +1,36 @@
+
+<div class="bg-surface-50 dark:bg-surface-950 flex items-center justify-center min-h-screen min-w-screen overflow-hidden">
+    <div class="flex flex-col items-center justify-center">
+        <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)">
+            <div class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20" style="border-radius: 53px">
+                <div class="text-center mb-8">
+                    <img src="/images/laurelDent1.png" alt="Logo" class="mb-8 w-16 shrink-0 mx-auto">
+                    <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Benvenido a Laurel Dent!</div>
+                </div>
+
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    
+                    <label for="email1" class="block text-surface-900 dark:text-surface-0 text-xl font-small mb-2">Correo electrónico</label>
+                    <input pInputText id="email1" type="text" placeholder="Correo electrónico" class="w-full md:w-120 mb-8"
+                        formControlName="email"
+                    />
+
+                    <label for="password1" class="block text-surface-900 dark:text-surface-0 font-small text-xl mb-2">Contraseña</label>
+                    <p-password id="password1" placeholder="Contraseña" [toggleMask]="true" [fluid]="true" [feedback]="false"
+                        formControlName="password"
+                    ></p-password>
+
+                    <small class="flex items-center justify-between mt-2 mb-8 ">
+                        <span class="font-medium no-underline ml-2 text-left cursor-pointer text-[var(--p-primary-500)]">¿Olvidaste tu contraseña?</span>
+                        <span class="font-medium no-underline ml-2 text-right cursor-pointer text-[var(--p-primary-500)]">¿No tienes una cuenta?</span>
+                    </small>
+                    <p-button label="iniciar sesión" styleClass="w-full" type="submit"></p-button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+@if(this.hasError()){
+    <p-message severity="error" class="fixed top-5 right-5">Por favor, revise sus credenciales.</p-message>
+}

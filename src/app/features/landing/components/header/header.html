@@ -1,0 +1,43 @@
+<header>
+    <nav class="wrapper h-22 items-center justify-between relative">
+       <div class="flex items-center justify-center h-20 w-44">
+            <a href="#" class="w-1/3 max-w-[140px]">
+                <img src="/images/laurelDent1.png" alt="Logo" class="w-12 md:w-30">
+            </a>
+            <h2 class="font-bold text-xl text-midnight-blue">Laurel Dent</h2>
+       </div>
+      
+
+      <!-- Checkbox para menú móvil -->
+      <input type="checkbox" id="menu" class="peer hidden">
+
+      <!-- Botón hamburguesa -->
+      <label for="menu"
+        class="bg-[url(/images/icon-hamburger.svg)] w-6 h-5 bg-cover bg-center cursor-pointer 
+               peer-checked:bg-[url(/images/icon-close.svg)] transition-all z-50 md:hidden">
+      </label>
+
+      <!-- Menú desplegable -->
+      <div
+        class="fixed inset-0 bg-gradient-to-b from-white/70 to-black/70 translate-x-full 
+               peer-checked:translate-x-0 transition-transform z-40
+               md:static md:bg-none md:translate-x-0">
+        <ul
+          class="absolute inset-x-0 top-24 p-12 bg-white w-[90%] mx-auto rounded-md 
+                 h-max text-center grid gap-2 font-bold text-midnight-blue shadow-2xl text-xl
+                 md:w-max md:bg-transparent md:p-0 md:grid-flow-col md:static">
+
+          @for (item of headers; track item.name) {
+            <li class="md:ml-6">
+              <a 
+                [routerLink]="item.url" 
+                routerLinkActive="router-link-active">
+                {{ item.name }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+    </nav>
+  </header>

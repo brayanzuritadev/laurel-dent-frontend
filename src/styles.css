@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+@theme {
+  --font-vietnam: "Be Vietnam Pro", sans-serif;
+  --color-midnight-blue: #0C3760;
+  --color-sky-blue: #19B0CE;
+  --color-light-gray: #F3F4F6;
+  --color-slate-gray: #6B7280;
+}
+
+@layer components {
+  .wrapper {
+    @apply w-[90%] mx-auto overflow-hidden flex max-w-7xl
+  }
+
+  .button {
+    @apply bg-sky-blue text-light-gray block w-max py-4 px-12 rounded-full
+  }
+}
